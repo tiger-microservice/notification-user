@@ -1,0 +1,37 @@
+server:
+  port: 8093
+
+spring:
+  application:
+    name: notification-user
+  banner:
+    location: tiger-banner.txt
+  datasource:
+    url: ${DBMS_CONNECTION}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    show-sql: true
+  data:
+    mongodb:
+      uri: ${URI_MONGODB_DB}
+  kafka:
+    streams:
+      bootstrap-servers: localhost:9092
+      application-id: notification-user
+    bootstrap-servers: localhost:9092
+    consumer:
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        spring.json.trusted.packages: '*'
+      group-id: notification-user
+    producer:
+      bootstrap-servers: localhost:9092
+jwt:
+  singer-key: ${JWT_SECRET_KEY}

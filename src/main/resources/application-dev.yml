@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: notification-user
+  banner:
+    location: tiger-banner.txt
+  data:
+    mongodb:
+      uri: ${URI_MONGODB_DB}
+  profiles:
+    active: dev
+  kafka:
+    streams:
+      bootstrap-servers: localhost:9092
+      application-id: notification-inbound
+    bootstrap-servers: localhost:9092
+    consumer:
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        spring.json.trusted.packages: '*'
+      group-id: notification-inbound
+    producer:
+      bootstrap-servers: localhost:9092
