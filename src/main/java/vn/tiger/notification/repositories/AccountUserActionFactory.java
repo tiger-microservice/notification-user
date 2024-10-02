@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import vn.tiger.notification.constants.enums.AccountUserActionType;
-import vn.tiger.notification.exceptions.AppErrorCode;
 import vn.tiger.notification.services.accountuseraction.AccountUserActionService;
 
 import java.util.List;

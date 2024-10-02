@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import vn.tiger.notification.constants.enums.AccountUserActionType;
-import vn.tiger.notification.dtos.message.AccountLoginMessage;
 import vn.tiger.notification.dtos.message.AccountLogoutMessage;
 import vn.tiger.notification.dtos.message.AccountUserActionMessage;
 import vn.tiger.notification.entities.mongoose.UserDeviceToken;
