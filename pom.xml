@@ -10,7 +10,7 @@
     </parent>
     <groupId>vn.tiger</groupId>
     <artifactId>notification-user</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>notification-user</name>
     <description>notification-user</description>
     <properties>
